@@ -1,0 +1,146 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #87CEFA, #1E90FF);
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background 0.4s ease;
+  }
+  
+  .weather-app {
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-sizing: border-box;
+    transition: width 0.3s ease;
+  }
+  a{
+    text-decoration: none;
+  }
+  a:hover{
+    text-decoration: underline;
+  }
+  input{
+    padding: 8px 15px;
+    border-radius: 6px;
+  }
+  .weather-display {
+    margin-top: 20px;
+    animation: fadeIn 1.5s ease;
+  }
+  
+  #weatherIcon {
+    font-size: 60px;
+  }
+  
+  button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 5px;
+    background-color: #f8f8f8;
+    color: #333;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Background change based on weather */
+  body.sunny {
+    background: linear-gradient(to bottom, #FFD700, #FF8C00);
+  }
+  
+  body.rainy {
+    background: linear-gradient(to bottom, #0f0f0f, #434343);
+  }
+  
+  body.cloudy {
+    background: linear-gradient(to bottom, #a1a1a1, #4f4f4f);
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  /* Temperature toggle animation */
+  #tempValue {
+    transition: transform 0.4s ease, color 0.4s ease;
+  }
+  
+  .temp-celsius {
+    transform: rotate(360deg);
+    color: #032e44;
+    font-size: 25px;
+  }
+  
+  .temp-fahrenheit {
+    transform: rotate(-360deg);
+    color: #ff4500;
+    font-size: 25px;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 1200px) {
+    .weather-app {
+      width: 85%;
+    }
+  
+    #weatherIcon {
+      font-size: 50px;
+    }
+  
+    button {
+      padding: 8px 12px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      height: auto;
+      padding: 20px;
+    }
+  
+    .weather-app {
+      width: 90%;
+    }
+  
+    #weatherIcon {
+      font-size: 45px;
+    }
+  
+    button {
+      padding: 7px 10px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .weather-app {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    #weatherIcon {
+      font-size: 40px;
+    }
+  
+    button {
+      padding: 6px 8px;
+      font-size: 0.8rem;
+    }
+  }
+  
